@@ -70,7 +70,7 @@
             this.ArchLagLabel1.Location = new System.Drawing.Point(28, 26);
             this.ArchLagLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ArchLagLabel1.Name = "ArchLagLabel1";
-            this.ArchLagLabel1.Size = new System.Drawing.Size(104, 20);
+            this.ArchLagLabel1.Size = new System.Drawing.Size(85, 17);
             this.ArchLagLabel1.TabIndex = 2;
             this.ArchLagLabel1.Text = "ARCH Lags:";
             // 
@@ -80,7 +80,7 @@
             this.ArchLagsLabel.Location = new System.Drawing.Point(144, 26);
             this.ArchLagsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ArchLagsLabel.Name = "ArchLagsLabel";
-            this.ArchLagsLabel.Size = new System.Drawing.Size(18, 20);
+            this.ArchLagsLabel.Size = new System.Drawing.Size(16, 17);
             this.ArchLagsLabel.TabIndex = 3;
             this.ArchLagsLabel.Text = "0";
             // 
@@ -90,17 +90,18 @@
             this.label1.Location = new System.Drawing.Point(28, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "ARCH Cells";
             // 
             // ArchRefEdit
             // 
+            this.ArchRefEdit._CellsCount = 0;
             this.ArchRefEdit._Excel = null;
             this.ArchRefEdit.AllowCollapsedFormResize = false;
             this.ArchRefEdit.Location = new System.Drawing.Point(148, 104);
             this.ArchRefEdit.Name = "ArchRefEdit";
-            this.ArchRefEdit.Size = new System.Drawing.Size(172, 22);
+            this.ArchRefEdit.Size = new System.Drawing.Size(172, 20);
             this.ArchRefEdit.TabIndex = 3;
             this.ArchRefEdit.CellChanged += new VS.NET_RefeditControl.refeditCellChangeEventHandler(this.ArchRefEdit_CellChanged);
             // 
@@ -110,17 +111,18 @@
             this.label2.Location = new System.Drawing.Point(28, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "GARCH Cells";
             // 
             // GarchRefEdit
             // 
+            this.GarchRefEdit._CellsCount = 0;
             this.GarchRefEdit._Excel = null;
             this.GarchRefEdit.AllowCollapsedFormResize = false;
             this.GarchRefEdit.Location = new System.Drawing.Point(148, 140);
             this.GarchRefEdit.Name = "GarchRefEdit";
-            this.GarchRefEdit.Size = new System.Drawing.Size(172, 22);
+            this.GarchRefEdit.Size = new System.Drawing.Size(172, 20);
             this.GarchRefEdit.TabIndex = 4;
             this.GarchRefEdit.CellChanged += new VS.NET_RefeditControl.refeditCellChangeEventHandler(this.GarchRefEdit_CellChanged);
             // 
@@ -130,7 +132,7 @@
             this.label3.Location = new System.Drawing.Point(170, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "GARCH Lags:";
             // 
@@ -140,17 +142,18 @@
             this.GarchLagsLabel.Location = new System.Drawing.Point(295, 26);
             this.GarchLagsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GarchLagsLabel.Name = "GarchLagsLabel";
-            this.GarchLagsLabel.Size = new System.Drawing.Size(18, 20);
+            this.GarchLagsLabel.Size = new System.Drawing.Size(16, 17);
             this.GarchLagsLabel.TabIndex = 9;
             this.GarchLagsLabel.Text = "0";
             // 
             // ConstRefEdit
             // 
+            this.ConstRefEdit._CellsCount = 0;
             this.ConstRefEdit._Excel = null;
             this.ConstRefEdit.AllowCollapsedFormResize = false;
             this.ConstRefEdit.Location = new System.Drawing.Point(148, 68);
             this.ConstRefEdit.Name = "ConstRefEdit";
-            this.ConstRefEdit.Size = new System.Drawing.Size(172, 22);
+            this.ConstRefEdit.Size = new System.Drawing.Size(172, 20);
             this.ConstRefEdit.TabIndex = 2;
             this.ConstRefEdit.CellChanged += new VS.NET_RefeditControl.refeditCellChangeEventHandler(this.ConstRefEdit_CellChanged);
             // 
@@ -160,13 +163,13 @@
             this.label4.Location = new System.Drawing.Point(28, 70);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Const. Cell";
             // 
             // GARCHForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 252);
             this.Controls.Add(this.ConstRefEdit);

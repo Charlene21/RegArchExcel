@@ -42,13 +42,15 @@ namespace RegArchExcel
             {
                 EnableDisableButton(ref NormAddButton, ref NormRemoveButton, false);
                 EnableDisableButton(ref StudentAddButton, ref StudentRemoveButton, false);
-                EnableDisableButton(ref GedAddButton, ref StudentRemoveButton, false);
+                EnableDisableButton(ref GedAddButton, ref GedRemoveButton, false);
+                EnableDisableButton(ref SkewTAddButton, ref SkewTRemoveButton, false);
             }
             else
             {
                 EnableDisableButton(ref NormAddButton, ref NormRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondDistr.mModelType == (int)eDistrTypeEnumCli.eNormal));
                 EnableDisableButton(ref StudentAddButton, ref StudentRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondDistr.mModelType == (int)eDistrTypeEnumCli.eStudent));
-                EnableDisableButton(ref GedAddButton, ref StudentRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondDistr.mModelType == (int)eDistrTypeEnumCli.eGed));
+                EnableDisableButton(ref GedAddButton, ref GedRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondDistr.mModelType == (int)eDistrTypeEnumCli.eGed));
+                EnableDisableButton(ref SkewTAddButton, ref SkewTRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondDistr.mModelType == (int)eDistrTypeEnumCli.eSkewT));
             }
         }
 
@@ -117,5 +119,26 @@ namespace RegArchExcel
             UpdateControl();
 
         }
+
+        private void CondDistrForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SkewTRemoveButton_Click(object sender, EventArgs e)
+        {
+            Globals.ThisAddIn.mAddInModel.DeleteCondDistr();
+            UpdateControl();
+        }
+
+        private void SkewTAddButton_Click(object sender, EventArgs e)
+        {
+            SkewTForm mySkewTForm = new SkewTForm() { TopMost = true };
+            AddOwnedForm(mySkewTForm);
+            mySkewTForm.Show();
+            Hide();
+        }
+
+
     }
 }

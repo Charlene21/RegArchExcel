@@ -45,6 +45,7 @@ namespace RegArchExcel
                 EnableDisableButton(ref TarchAddButton, ref TarchRemoveButton, false);
                 EnableDisableButton(ref EgarchAddButton, ref EgarchRemoveButton, false);
                 EnableDisableButton(ref AparchAddButton, ref AparchRemoveButton, false);
+                EnableDisableButton(ref UgarchAddButton, ref UgarchRemoveButton, false);
             }
             else
             {
@@ -54,6 +55,7 @@ namespace RegArchExcel
                 EnableDisableButton(ref TarchAddButton, ref TarchRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondVar.mModelType == (int)eCondVarEnumCli.eTarch));
                 EnableDisableButton(ref EgarchAddButton, ref EgarchRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondVar.mModelType == (int)eCondVarEnumCli.eEgarch));
                 EnableDisableButton(ref AparchAddButton, ref AparchRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondVar.mModelType == (int)eCondVarEnumCli.eAparch));
+                EnableDisableButton(ref UgarchAddButton, ref UgarchRemoveButton, (Globals.ThisAddIn.mAddInModel.mCondVar.mModelType == (int)eCondVarEnumCli.eUgarch));
             }
         }
 
@@ -179,6 +181,20 @@ namespace RegArchExcel
             Globals.ThisAddIn.mAddInModel.DeleteCondVar();
             UpdateControl();
 
+        }
+
+        private void UgarchAddButton_Click(object sender, EventArgs e)
+        {
+            UGarchForm myUgarchForm = new UGarchForm() { TopMost = true };
+            AddOwnedForm(myUgarchForm);
+            myUgarchForm.Show();
+            Hide();
+        }
+
+        private void UgarchRemoveButton_Click(object sender, EventArgs e)
+        {
+            Globals.ThisAddIn.mAddInModel.DeleteCondVar();
+            UpdateControl();
         }
 
     

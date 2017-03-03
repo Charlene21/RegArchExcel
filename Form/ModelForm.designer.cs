@@ -71,7 +71,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 212);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 24);
+            this.label1.Size = new System.Drawing.Size(120, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Current Model:";
             // 
@@ -81,7 +81,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 249);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 20);
+            this.label2.Size = new System.Drawing.Size(159, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Conditional Mean Model";
             // 
@@ -90,7 +90,7 @@
             this.CondMeanLabel.AutoSize = true;
             this.CondMeanLabel.Location = new System.Drawing.Point(58, 285);
             this.CondMeanLabel.Name = "CondMeanLabel";
-            this.CondMeanLabel.Size = new System.Drawing.Size(97, 20);
+            this.CondMeanLabel.Size = new System.Drawing.Size(80, 17);
             this.CondMeanLabel.TabIndex = 7;
             this.CondMeanLabel.Text = "Pure ARCH";
             // 
@@ -100,7 +100,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(39, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(213, 20);
+            this.label4.Size = new System.Drawing.Size(180, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Conditional Variance Model";
             // 
@@ -109,7 +109,7 @@
             this.CondVarLabel.AutoSize = true;
             this.CondVarLabel.Location = new System.Drawing.Point(58, 357);
             this.CondVarLabel.Name = "CondVarLabel";
-            this.CondVarLabel.Size = new System.Drawing.Size(38, 20);
+            this.CondVarLabel.Size = new System.Drawing.Size(34, 17);
             this.CondVarLabel.TabIndex = 9;
             this.CondVarLabel.Text = "i.i.d.";
             // 
@@ -119,7 +119,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(39, 391);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 20);
+            this.label3.Size = new System.Drawing.Size(153, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Conditional Distribution";
             // 
@@ -128,9 +128,10 @@
             this.CondDistrLabel.AutoSize = true;
             this.CondDistrLabel.Location = new System.Drawing.Point(58, 427);
             this.CondDistrLabel.Name = "CondDistrLabel";
-            this.CondDistrLabel.Size = new System.Drawing.Size(80, 20);
+            this.CondDistrLabel.Size = new System.Drawing.Size(68, 17);
             this.CondDistrLabel.TabIndex = 11;
             this.CondDistrLabel.Text = "Gaussian";
+            this.CondDistrLabel.Click += new System.EventHandler(this.CondDistrLabel_Click);
             // 
             // CondMeanButton
             // 
@@ -165,7 +166,7 @@
             // ModelForm
             // 
             this.AcceptButton = this.OKBouton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CancelBouton;
             this.ClientSize = new System.Drawing.Size(424, 518);

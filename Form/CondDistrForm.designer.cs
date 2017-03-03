@@ -39,12 +39,15 @@
             this.GedRemoveButton = new System.Windows.Forms.Button();
             this.GedLabel = new System.Windows.Forms.Label();
             this.GedAddButton = new System.Windows.Forms.Button();
+            this.SkewTLabel = new System.Windows.Forms.Label();
+            this.SkewTAddButton = new System.Windows.Forms.Button();
+            this.SkewTRemoveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OKBouton
             // 
             this.OKBouton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.OKBouton.Location = new System.Drawing.Point(270, 153);
+            this.OKBouton.Location = new System.Drawing.Point(270, 207);
             this.OKBouton.Margin = new System.Windows.Forms.Padding(4);
             this.OKBouton.Name = "OKBouton";
             this.OKBouton.Size = new System.Drawing.Size(94, 29);
@@ -56,7 +59,7 @@
             // CancelBouton
             // 
             this.CancelBouton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelBouton.Location = new System.Drawing.Point(28, 153);
+            this.CancelBouton.Location = new System.Drawing.Point(27, 207);
             this.CancelBouton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelBouton.Name = "CancelBouton";
             this.CancelBouton.Size = new System.Drawing.Size(94, 29);
@@ -81,7 +84,7 @@
             this.NoCondMeanLabel.Enabled = false;
             this.NoCondMeanLabel.Location = new System.Drawing.Point(24, 22);
             this.NoCondMeanLabel.Name = "NoCondMeanLabel";
-            this.NoCondMeanLabel.Size = new System.Drawing.Size(80, 20);
+            this.NoCondMeanLabel.Size = new System.Drawing.Size(68, 17);
             this.NoCondMeanLabel.TabIndex = 16;
             this.NoCondMeanLabel.Text = "Gaussian";
             // 
@@ -90,7 +93,7 @@
             this.ConstLabel.AutoSize = true;
             this.ConstLabel.Location = new System.Drawing.Point(24, 62);
             this.ConstLabel.Name = "ConstLabel";
-            this.ConstLabel.Size = new System.Drawing.Size(66, 20);
+            this.ConstLabel.Size = new System.Drawing.Size(57, 17);
             this.ConstLabel.TabIndex = 17;
             this.ConstLabel.Text = "Student";
             // 
@@ -142,7 +145,7 @@
             this.GedLabel.AutoSize = true;
             this.GedLabel.Location = new System.Drawing.Point(24, 105);
             this.GedLabel.Name = "GedLabel";
-            this.GedLabel.Size = new System.Drawing.Size(46, 20);
+            this.GedLabel.Size = new System.Drawing.Size(38, 17);
             this.GedLabel.TabIndex = 20;
             this.GedLabel.Text = "GED";
             // 
@@ -156,13 +159,46 @@
             this.GedAddButton.UseVisualStyleBackColor = true;
             this.GedAddButton.Click += new System.EventHandler(this.GedAddButton_Click);
             // 
+            // SkewTLabel
+            // 
+            this.SkewTLabel.AutoSize = true;
+            this.SkewTLabel.Location = new System.Drawing.Point(24, 148);
+            this.SkewTLabel.Name = "SkewTLabel";
+            this.SkewTLabel.Size = new System.Drawing.Size(50, 17);
+            this.SkewTLabel.TabIndex = 21;
+            this.SkewTLabel.Text = "SkewT";
+            // 
+            // SkewTAddButton
+            // 
+            this.SkewTAddButton.Location = new System.Drawing.Point(157, 148);
+            this.SkewTAddButton.Name = "SkewTAddButton";
+            this.SkewTAddButton.Size = new System.Drawing.Size(86, 31);
+            this.SkewTAddButton.TabIndex = 22;
+            this.SkewTAddButton.Text = "Add";
+            this.SkewTAddButton.UseVisualStyleBackColor = true;
+            this.SkewTAddButton.Click += new System.EventHandler(this.SkewTAddButton_Click);
+            // 
+            // SkewTRemoveButton
+            // 
+            this.SkewTRemoveButton.Enabled = false;
+            this.SkewTRemoveButton.Location = new System.Drawing.Point(278, 148);
+            this.SkewTRemoveButton.Name = "SkewTRemoveButton";
+            this.SkewTRemoveButton.Size = new System.Drawing.Size(86, 31);
+            this.SkewTRemoveButton.TabIndex = 23;
+            this.SkewTRemoveButton.Text = "Remove";
+            this.SkewTRemoveButton.UseVisualStyleBackColor = true;
+            this.SkewTRemoveButton.Click += new System.EventHandler(this.SkewTRemoveButton_Click);
+            // 
             // CondDistrForm
             // 
             this.AcceptButton = this.OKBouton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CancelBouton;
-            this.ClientSize = new System.Drawing.Size(378, 199);
+            this.ClientSize = new System.Drawing.Size(378, 266);
+            this.Controls.Add(this.SkewTRemoveButton);
+            this.Controls.Add(this.SkewTAddButton);
+            this.Controls.Add(this.SkewTLabel);
             this.Controls.Add(this.GedRemoveButton);
             this.Controls.Add(this.GedLabel);
             this.Controls.Add(this.GedAddButton);
@@ -179,6 +215,7 @@
             this.Name = "CondDistrForm";
             this.Text = "Conditional Distribution Model";
             this.Activated += new System.EventHandler(this.CondDistrForm_Activated);
+            this.Load += new System.EventHandler(this.CondDistrForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +234,8 @@
         private System.Windows.Forms.Button GedRemoveButton;
         private System.Windows.Forms.Label GedLabel;
         private System.Windows.Forms.Button GedAddButton;
+        private System.Windows.Forms.Label SkewTLabel;
+        private System.Windows.Forms.Button SkewTAddButton;
+        private System.Windows.Forms.Button SkewTRemoveButton;
     }
 }

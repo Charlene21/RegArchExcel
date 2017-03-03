@@ -67,5 +67,10 @@ namespace RegArchExcel
 
         }
 
+        private void CondDistrLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

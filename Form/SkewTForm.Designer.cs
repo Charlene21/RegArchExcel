@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.StdevInMeanRefEdit = new VS.NET_RefeditControl.refedit();
+            this.SkewTRefEdit = new VS.NET_RefeditControl.refedit();
             this.label2 = new System.Windows.Forms.Label();
-            this.refedit1 = new VS.NET_RefeditControl.refedit();
+            this.GammaRefEdit = new VS.NET_RefeditControl.refedit();
             this.CancelBouton = new System.Windows.Forms.Button();
             this.OKBouton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,15 +46,15 @@
             this.label1.Text = "DoF";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // StdevInMeanRefEdit
+            // SkewTRefEdit
             // 
-            this.StdevInMeanRefEdit._CellsCount = 0;
-            this.StdevInMeanRefEdit._Excel = null;
-            this.StdevInMeanRefEdit.AllowCollapsedFormResize = false;
-            this.StdevInMeanRefEdit.Location = new System.Drawing.Point(135, 29);
-            this.StdevInMeanRefEdit.Name = "StdevInMeanRefEdit";
-            this.StdevInMeanRefEdit.Size = new System.Drawing.Size(172, 20);
-            this.StdevInMeanRefEdit.TabIndex = 4;
+            this.SkewTRefEdit._CellsCount = 0;
+            this.SkewTRefEdit._Excel = null;
+            this.SkewTRefEdit.AllowCollapsedFormResize = false;
+            this.SkewTRefEdit.Location = new System.Drawing.Point(135, 29);
+            this.SkewTRefEdit.Name = "SkewTRefEdit";
+            this.SkewTRefEdit.Size = new System.Drawing.Size(172, 20);
+            this.SkewTRefEdit.TabIndex = 4;
             // 
             // label2
             // 
@@ -65,15 +65,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Gamma";
             // 
-            // refedit1
+            // GammaRefEdit
             // 
-            this.refedit1._CellsCount = 0;
-            this.refedit1._Excel = null;
-            this.refedit1.AllowCollapsedFormResize = false;
-            this.refedit1.Location = new System.Drawing.Point(135, 77);
-            this.refedit1.Name = "refedit1";
-            this.refedit1.Size = new System.Drawing.Size(172, 20);
-            this.refedit1.TabIndex = 6;
+            this.GammaRefEdit._CellsCount = 0;
+            this.GammaRefEdit._Excel = null;
+            this.GammaRefEdit.AllowCollapsedFormResize = false;
+            this.GammaRefEdit.Location = new System.Drawing.Point(135, 77);
+            this.GammaRefEdit.Name = "GammaRefEdit";
+            this.GammaRefEdit.Size = new System.Drawing.Size(172, 20);
+            this.GammaRefEdit.TabIndex = 6;
             // 
             // CancelBouton
             // 
@@ -84,6 +84,7 @@
             this.CancelBouton.TabIndex = 7;
             this.CancelBouton.Text = "Cancel";
             this.CancelBouton.UseVisualStyleBackColor = true;
+            this.CancelBouton.Click += new System.EventHandler(this.CancelBouton_Click);
             // 
             // OKBouton
             // 
@@ -93,6 +94,7 @@
             this.OKBouton.TabIndex = 8;
             this.OKBouton.Text = "OK";
             this.OKBouton.UseVisualStyleBackColor = true;
+            this.OKBouton.Click += new System.EventHandler(this.OKBouton_Click);
             // 
             // SkewTForm
             // 
@@ -101,9 +103,9 @@
             this.ClientSize = new System.Drawing.Size(329, 205);
             this.Controls.Add(this.OKBouton);
             this.Controls.Add(this.CancelBouton);
-            this.Controls.Add(this.refedit1);
+            this.Controls.Add(this.GammaRefEdit);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.StdevInMeanRefEdit);
+            this.Controls.Add(this.SkewTRefEdit);
             this.Controls.Add(this.label1);
             this.Name = "SkewTForm";
             this.Text = "SkewTForm";
@@ -115,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private VS.NET_RefeditControl.refedit StdevInMeanRefEdit;
+        private VS.NET_RefeditControl.refedit SkewTRefEdit;
         private System.Windows.Forms.Label label2;
-        private VS.NET_RefeditControl.refedit refedit1;
+        private VS.NET_RefeditControl.refedit GammaRefEdit;
         private System.Windows.Forms.Button CancelBouton;
         private System.Windows.Forms.Button OKBouton;
     }

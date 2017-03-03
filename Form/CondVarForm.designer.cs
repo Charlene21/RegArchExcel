@@ -51,12 +51,15 @@
             this.FigarchLabel = new System.Windows.Forms.Label();
             this.FigarchAddButton = new System.Windows.Forms.Button();
             this.FigarchRemoveButton = new System.Windows.Forms.Button();
+            this.UgarchRemoveButton = new System.Windows.Forms.Button();
+            this.UgarchAddButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OKBouton
             // 
             this.OKBouton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.OKBouton.Location = new System.Drawing.Point(283, 305);
+            this.OKBouton.Location = new System.Drawing.Point(283, 338);
             this.OKBouton.Margin = new System.Windows.Forms.Padding(4);
             this.OKBouton.Name = "OKBouton";
             this.OKBouton.Size = new System.Drawing.Size(94, 29);
@@ -68,7 +71,7 @@
             // CancelBouton
             // 
             this.CancelBouton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelBouton.Location = new System.Drawing.Point(28, 305);
+            this.CancelBouton.Location = new System.Drawing.Point(28, 338);
             this.CancelBouton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelBouton.Name = "CancelBouton";
             this.CancelBouton.Size = new System.Drawing.Size(94, 29);
@@ -142,7 +145,7 @@
             this.ConstLabel.AutoSize = true;
             this.ConstLabel.Location = new System.Drawing.Point(24, 22);
             this.ConstLabel.Name = "ConstLabel";
-            this.ConstLabel.Size = new System.Drawing.Size(76, 20);
+            this.ConstLabel.Size = new System.Drawing.Size(64, 17);
             this.ConstLabel.TabIndex = 17;
             this.ConstLabel.Text = "Constant";
             // 
@@ -151,7 +154,7 @@
             this.ARCHLabel.AutoSize = true;
             this.ARCHLabel.Location = new System.Drawing.Point(24, 62);
             this.ARCHLabel.Name = "ARCHLabel";
-            this.ARCHLabel.Size = new System.Drawing.Size(78, 20);
+            this.ARCHLabel.Size = new System.Drawing.Size(64, 17);
             this.ARCHLabel.TabIndex = 18;
             this.ARCHLabel.Text = "ARCH(p)";
             // 
@@ -160,7 +163,7 @@
             this.MALabel.AutoSize = true;
             this.MALabel.Location = new System.Drawing.Point(24, 102);
             this.MALabel.Name = "MALabel";
-            this.MALabel.Size = new System.Drawing.Size(104, 20);
+            this.MALabel.Size = new System.Drawing.Size(87, 17);
             this.MALabel.TabIndex = 19;
             this.MALabel.Text = "GARCH(p,q)";
             // 
@@ -169,7 +172,7 @@
             this.TARCHLabel.AutoSize = true;
             this.TARCHLabel.Location = new System.Drawing.Point(24, 142);
             this.TARCHLabel.Name = "TARCHLabel";
-            this.TARCHLabel.Size = new System.Drawing.Size(88, 20);
+            this.TARCHLabel.Size = new System.Drawing.Size(73, 17);
             this.TARCHLabel.TabIndex = 20;
             this.TARCHLabel.Text = "TARCH(p)";
             // 
@@ -178,7 +181,7 @@
             this.EgarchLabel.AutoSize = true;
             this.EgarchLabel.Location = new System.Drawing.Point(24, 182);
             this.EgarchLabel.Name = "EgarchLabel";
-            this.EgarchLabel.Size = new System.Drawing.Size(115, 20);
+            this.EgarchLabel.Size = new System.Drawing.Size(96, 17);
             this.EgarchLabel.TabIndex = 21;
             this.EgarchLabel.Text = "EGARCH(p,q)";
             // 
@@ -187,7 +190,7 @@
             this.APARCH.AutoSize = true;
             this.APARCH.Location = new System.Drawing.Point(24, 222);
             this.APARCH.Name = "APARCH";
-            this.APARCH.Size = new System.Drawing.Size(113, 20);
+            this.APARCH.Size = new System.Drawing.Size(94, 17);
             this.APARCH.TabIndex = 22;
             this.APARCH.Text = "APARCH(p,q)";
             // 
@@ -262,7 +265,7 @@
             this.FigarchLabel.AutoSize = true;
             this.FigarchLabel.Location = new System.Drawing.Point(26, 262);
             this.FigarchLabel.Name = "FigarchLabel";
-            this.FigarchLabel.Size = new System.Drawing.Size(118, 20);
+            this.FigarchLabel.Size = new System.Drawing.Size(98, 17);
             this.FigarchLabel.TabIndex = 23;
             this.FigarchLabel.Text = "FIGARCH(p,q)";
             // 
@@ -287,13 +290,46 @@
             this.FigarchRemoveButton.UseVisualStyleBackColor = true;
             this.FigarchRemoveButton.Click += new System.EventHandler(this.FigarchRemoveButton_Click);
             // 
+            // UgarchRemoveButton
+            // 
+            this.UgarchRemoveButton.Enabled = false;
+            this.UgarchRemoveButton.Location = new System.Drawing.Point(291, 297);
+            this.UgarchRemoveButton.Name = "UgarchRemoveButton";
+            this.UgarchRemoveButton.Size = new System.Drawing.Size(86, 31);
+            this.UgarchRemoveButton.TabIndex = 28;
+            this.UgarchRemoveButton.Text = "Remove";
+            this.UgarchRemoveButton.UseVisualStyleBackColor = true;
+            this.UgarchRemoveButton.Click += new System.EventHandler(this.UgarchRemoveButton_Click);
+            // 
+            // UgarchAddButton
+            // 
+            this.UgarchAddButton.Location = new System.Drawing.Point(170, 297);
+            this.UgarchAddButton.Name = "UgarchAddButton";
+            this.UgarchAddButton.Size = new System.Drawing.Size(86, 31);
+            this.UgarchAddButton.TabIndex = 27;
+            this.UgarchAddButton.Text = "Add";
+            this.UgarchAddButton.UseVisualStyleBackColor = true;
+            this.UgarchAddButton.Click += new System.EventHandler(this.UgarchAddButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 302);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "UGARCH(p,q)";
+            // 
             // CondVarForm
             // 
             this.AcceptButton = this.OKBouton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CancelBouton;
-            this.ClientSize = new System.Drawing.Size(394, 345);
+            this.ClientSize = new System.Drawing.Size(394, 382);
+            this.Controls.Add(this.UgarchRemoveButton);
+            this.Controls.Add(this.UgarchAddButton);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.FigarchRemoveButton);
             this.Controls.Add(this.FigarchAddButton);
             this.Controls.Add(this.FigarchLabel);
@@ -352,5 +388,8 @@
         private System.Windows.Forms.Label FigarchLabel;
         private System.Windows.Forms.Button FigarchAddButton;
         private System.Windows.Forms.Button FigarchRemoveButton;
+        private System.Windows.Forms.Button UgarchRemoveButton;
+        private System.Windows.Forms.Button UgarchAddButton;
+        private System.Windows.Forms.Label label1;
     }
 }
